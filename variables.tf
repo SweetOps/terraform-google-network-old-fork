@@ -8,3 +8,12 @@ variable "auto_create_subnetworks" {
   default     = "false"
   description = "Auto-creation of the associated subnet"
 }
+
+variable "project" {
+  description = "GCE project name"
+  default     = ""
+}
+
+variable "description" {
+  default = "Managed by Terraform"
+}

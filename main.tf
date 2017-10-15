@@ -1,5 +1,8 @@
-resource "google_compute_network" "your_network" {
+data "google_client_config" "default" {}
+
+resource "google_compute_network" "default" {
   name                    = "${var.name}"
   auto_create_subnetworks = "${var.auto_create_subnetworks}"
-  description             = "Will create a VPC with subnet for each region created automatically"
+  project                 = "${length(compact(var.project)) > 0 ? var.project : data.google_client_config.default.project}"
+  description             = "${var.description}"
 }
