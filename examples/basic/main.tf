@@ -1,10 +1,3 @@
-# terraform-google-project-iam-custom-role
-
-Terraform module to proviosion VPC network.
-
-## Usage
-
-```hcl
 module "label" {
   source    = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.24.1"
   namespace = "sweetops"
@@ -17,10 +10,4 @@ module "your_aweasome_role" {
 
   context = module.label.context
 }
-```
 
-<!--- BEGIN_TF_DOCS --->
-<!--- END_TF_DOCS --->
-
-## License
-The Apache-2.0 license
